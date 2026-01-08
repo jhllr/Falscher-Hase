@@ -4,53 +4,90 @@
   <meta charset="UTF-8" />
   <title>CANINE – Premium Hundefutter</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Elegante Serif (Tiffany-ähnlicher) + Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- Announcement-Bar -->
-  <div class="announcement-bar">
-    Kostenloser Versand ab 49 € – CANINE Premiumfutter für urbane Hunde
-  </div>
+  <!-- HEADER: Tiffany-Style Overlay -->
+  <header class="site-header site-header--overlay">
+    <div class="header-wrap">
+      <div class="header-top">
+        <!-- LEFT ICONS -->
+        <div class="header-icons header-icons--left">
+          <button class="icon-button icon-button--ghost" aria-label="Suche">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z" fill="none" stroke="currentColor" stroke-width="1.6"/>
+              <path d="M16.2 16.2 21 21" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </button>
 
-  <!-- Header / Navigation -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="header-left">
-        <button class="icon-button" aria-label="Suche">🔍</button>
+          <button class="icon-button icon-button--ghost" aria-label="Store Finder">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+              <path d="M12 11.2a2.2 2.2 0 1 0 0-4.4 2.2 2.2 0 0 0 0 4.4Z" fill="none" stroke="currentColor" stroke-width="1.6"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- CENTER LOGO -->
+        <div class="header-brand">
+          <a href="#" class="logo">CANINE</a>
+        </div>
+
+        <!-- RIGHT ICONS -->
+        <div class="header-icons header-icons--right">
+          <button class="icon-button icon-button--ghost" aria-label="Benachrichtigungen">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 22a2.2 2.2 0 0 0 2.2-2.2h-4.4A2.2 2.2 0 0 0 12 22Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+              <path d="M18 10a6 6 0 1 0-12 0c0 7-3 7-3 7h18s-3 0-3-7Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            </svg>
+          </button>
+
+          <button class="icon-button icon-button--ghost" aria-label="Account">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Z" fill="none" stroke="currentColor" stroke-width="1.6"/>
+              <path d="M4.5 21a7.5 7.5 0 0 1 15 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </button>
+
+          <button class="icon-button icon-button--ghost" aria-label="Menü">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 7h14M5 12h14M5 17h14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
       </div>
 
-      <div class="header-center">
-        <div class="logo">CANINE</div>
-        <nav class="main-nav">
-          <a href="#">Trockenfutter</a>
-          <a href="#">Nassfutter</a>
-          <a href="#">Snacks</a>
-          <a href="#">Magazin</a>
-          <a href="#">Kontakt</a>
-        </nav>
-      </div>
-
-      <div class="header-right">
-        <button class="icon-button" aria-label="Account">👤</button>
-        <button class="icon-button" aria-label="Menü">☰</button>
-      </div>
+      <nav class="main-nav main-nav--tiffany" aria-label="Hauptnavigation">
+        <a href="#">Trockenfutter</a>
+        <a href="#">Nassfutter</a>
+        <a href="#">Snacks</a>
+        <a href="#">Magazin</a>
+        <a href="#">Kontakt</a>
+      </nav>
     </div>
   </header>
 
-  <!-- HERO: nur das große Bild -->
+  <!-- HERO: Vollbild + nur Button -->
   <section class="hero-full">
     <img
       src="Hero-bild-canine.png"
       alt="CANINE Hero – French Bulldog mit Futter"
       class="hero-full-image"
     >
+
+    <div class="hero-overlay">
+      <a class="hero-cta" href="#">SHOP NOW</a>
+    </div>
   </section>
 
   <main>
     <!-- SHOP BY CATEGORY -->
-    <section class="section categories">
+    <section class="section categories section--after-hero">
       <div class="container">
         <p class="section-kicker">CANINE SELECTION</p>
         <h2 class="section-title">Finde das perfekte Futter</h2>
@@ -59,28 +96,25 @@
         </p>
 
         <div class="category-grid">
-          <!-- Trockenfutter -->
           <div class="category-card">
-            <img src="Trockenfutter.png" alt="Canine Trockenfutter" class="category-img">
-            <p class="category-label">Trockenfutter</p>
+            <img src="Trockenfutter-neu.png" alt="Canine Trockenfutter" class="category-img category-img--dry">
+            <a class="category-link" href="#">Trockenfutter</a>
             <p class="category-copy">
               Knusprige Kroketten mit hoher Nährstoffdichte – perfekt für jeden Tag.
             </p>
           </div>
 
-          <!-- Nassfutter -->
           <div class="category-card">
-            <img src="Nassfutter.png" alt="Canine Nassfutter" class="category-img">
-            <p class="category-label">Nassfutter</p>
+            <img src="Nassfutter-neu.png" alt="Canine Nassfutter" class="category-img category-img--wet">
+            <a class="category-link" href="#">Nassfutter</a>
             <p class="category-copy">
               Saftige Stücke in feiner Sauce – wie ein eigenes Menü für deinen Hund.
             </p>
           </div>
 
-          <!-- Snacks -->
           <div class="category-card">
-            <img src="Snacks.png" alt="Canine Snacks" class="category-img">
-            <p class="category-label">Snacks</p>
+            <img src="Snacks-neu.png" alt="Canine Snacks" class="category-img category-img--snacks">
+            <a class="category-link" href="#">Snacks</a>
             <p class="category-copy">
               Belohnungen mit Stil – für Training, Zwischendurch und besondere Momente.
             </p>
@@ -89,12 +123,11 @@
       </div>
     </section>
 
-    <!-- PRODUKT-TEASER (zwei Spalten) -->
+    <!-- PRODUKT-TEASER (luftiger) -->
     <section class="section product-section">
       <div class="container product-grid">
 
-        <!-- Nassfutter groß -->
-        <div class="product-column">
+        <div class="product-column product-card">
           <img src="Nassfutter-groß.png" alt="Canine Nassfutter – Detailaufnahme" class="product-image">
           <div class="product-text">
             <p class="product-kicker">Nassfutter</p>
@@ -111,8 +144,7 @@
           </div>
         </div>
 
-        <!-- Trockenfutter groß -->
-        <div class="product-column">
+        <div class="product-column product-card">
           <img src="Trockenfutter-groß.png" alt="Canine Trockenfutter – Detailaufnahme" class="product-image">
           <div class="product-text">
             <p class="product-kicker">Trockenfutter</p>
@@ -131,10 +163,10 @@
       </div>
     </section>
 
-    <!-- FEATURE-BEREICH -->
-    <section class="section feature-section">
+    <!-- FEATURE-BEREICH (Snacks & Ritual) -->
+    <section class="section feature-section feature-section--snacks">
       <div class="feature-image-wrapper">
-        <img src="Snacks.png" alt="Canine Snackdose" class="feature-img">
+        <img src="Snacks-neu.png" alt="Canine Snackdose" class="feature-img">
       </div>
       <div class="feature-text">
         <p class="feature-kicker">Snacks & Ritual</p>
@@ -149,7 +181,7 @@
 
     <!-- STORY / BRAND-BEREICH -->
     <section class="section info-section">
-      <!-- Block 1: Warum CANINE -->
+
       <div class="container info-grid">
         <div class="info-column text-column">
           <div class="info-block">
@@ -174,14 +206,13 @@
         </div>
 
         <div class="info-column image-column">
-          <img src="Trockenfutter.png" alt="Canine Trockenfutter in Nahaufnahme" class="info-img">
+          <img src="Trockenfutter-nah.png" alt="Canine Trockenfutter in Nahaufnahme" class="info-img info-img--dry">
         </div>
       </div>
 
-      <!-- Block 2: Alltag & Routine -->
       <div class="container info-grid info-grid-bottom">
         <div class="info-column image-column">
-          <img src="Nassfutter.png" alt="Canine Nassfutter in Schale" class="info-img">
+          <img src="Nassfutter.png" alt="Canine Nassfutter in Schale" class="info-img info-img--wet">
         </div>
 
         <div class="info-column text-column">
@@ -204,10 +235,11 @@
           </div>
         </div>
       </div>
+
     </section>
   </main>
 
-  <!-- Footer -->
+  <!-- Footer + Nährwerttabelle -->
   <footer class="site-footer">
     <div class="container footer-top">
       <div class="footer-brand">
@@ -229,18 +261,35 @@
           <a href="#">Nassfutter</a>
           <a href="#">Snacks</a>
         </div>
+
         <div class="footer-column">
           <h5>Über CANINE</h5>
           <a href="#">Unsere Idee</a>
           <a href="#">Projekt „Falscher Hase“</a>
           <a href="#">Team</a>
         </div>
+
         <div class="footer-column">
           <h5>Service</h5>
           <a href="#">Kontakt</a>
           <a href="#">Datenschutz</a>
           <a href="#">Impressum</a>
         </div>
+
+        <div class="footer-column footer-nutrition">
+          <h5>Analytische Bestandteile</h5>
+          <p class="nutrition-note">pro 100 g</p>
+
+          <table class="nutrition-table" aria-label="Analytische Bestandteile pro 100 Gramm">
+            <tr><td>Rohprotein</td><td>28 %</td></tr>
+            <tr><td>Rohfett</td><td>14 %</td></tr>
+            <tr><td>Rohfaser</td><td>3 %</td></tr>
+            <tr><td>Rohasche</td><td>7 %</td></tr>
+            <tr><td>Feuchtigkeit</td><td>8 %</td></tr>
+            <tr><td>Omega-3</td><td>0,8 %</td></tr>
+          </table>
+        </div>
+
       </div>
     </div>
   </footer>
