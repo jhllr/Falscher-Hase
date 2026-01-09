@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CANINE – Landing Pages</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    body{
+      margin:0;
+      font-family:Inter,system-ui,sans-serif;
+      background:#fff;
+      color:#1c2528;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      min-height:100vh;
+    }
+    .box{
+      max-width:900px;
+      width:100%;
+      padding:40px;
+      border:1px solid rgba(0,0,0,.08);
+      border-radius:20px;
+    }
+    h1{
+      font-family:"Cormorant Garamond",serif;
+      text-transform:uppercase;
+      letter-spacing:.1em;
+      margin-bottom:30px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+    a{
+      border:1px solid rgba(0,0,0,.08);
+      border-radius:14px;
+      padding:24px;
+      text-decoration:none;
+      color:inherit;
+      transition:.15s;
+    }
+    a:hover{
+      transform:translateY(-2px);
+      box-shadow:0 8px 20px rgba(0,0,0,.08);
+    }
+    .k{
+      font-size:11px;
+      letter-spacing:.2em;
+      text-transform:uppercase;
+      color:#4b6064;
+    }
+    .t{
+      font-family:"Cormorant Garamond",serif;
+      font-size:22px;
+      margin:8px 0;
+      text-transform:uppercase;
+    }
+    @media(max-width:800px){
+      .grid{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h1>CANINE Landing Pages</h1>
+
+  <div class="grid">
+    <a href="./Normal/">
+      <div class="k">Adult Line</div>
+      <div class="t">Normal</div>
+    </a>
+
+    <a href="./Puppy/">
+      <div class="k">Puppy Line</div>
+      <div class="t">Puppy</div>
+    </a>
+
+    <a href="./Senior/">
+      <div class="k">Senior Line</div>
+      <div class="t">Senior</div>
+    </a>
+  </div>
+</div>
+
+</body>
+</html>
