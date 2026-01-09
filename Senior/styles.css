@@ -689,7 +689,7 @@ a {
    FIX: Feature-Bild (Snacks/Ruhe) positionieren
    ========================= */
 .feature-section.feature-section--snacks .feature-image-wrapper .feature-img {
-  object-position: center 100%;
+  object-position: center 60%;
 }
 
 /* =========================
