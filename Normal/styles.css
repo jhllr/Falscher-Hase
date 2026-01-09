@@ -771,3 +771,52 @@ a {
     padding: 10px 0 !important;
   }
 }
+
+/* =========================
+   MOBILE FIX (Header Icons: clean & stimmig)
+   GANZ UNTEN einfügen
+   ========================= */
+@media (max-width: 600px) {
+
+  /* Header oben kompakter */
+  .header-wrap {
+    padding: 12px 12px 8px;
+  }
+
+  /* weniger Abstand zwischen den Icon-Gruppen */
+  .header-icons {
+    gap: 8px;
+  }
+
+  /* Icon Buttons etwas kleiner */
+  .icon-button {
+    width: 34px;
+    height: 34px;
+  }
+
+  .icon-button svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* LOGISCHES MOBILE LAYOUT:
+     Links nur Suche, Rechts nur Burger, Mitte Logo */
+  .header-icons--left button[aria-label="Store Finder"] {
+    display: none !important;
+  }
+
+  .header-icons--right button[aria-label="Benachrichtigungen"],
+  .header-icons--right button[aria-label="Account"] {
+    display: none !important;
+  }
+
+  /* extra: falls irgendwas trotzdem umbrechen will */
+  .header-top {
+    align-items: center;
+  }
+
+  /* Logo etwas kleiner auf Mobile */
+  .logo {
+    font-size: clamp(26px, 7vw, 40px);
+  }
+}
