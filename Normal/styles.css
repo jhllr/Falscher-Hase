@@ -774,3 +774,7 @@ a {
     width: 100%;
   }
 }
+
+@media (max-width: 600px){
+  .site-footer { outline: 4px solid red !important; }
+}
