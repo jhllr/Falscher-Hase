@@ -385,7 +385,7 @@ a {
   height: 320px;
   border-radius: 18px;
   object-fit: cover;
-  object-position: center;
+  object-position: 3000%;
 }
 
 .feature-text {
